@@ -57,21 +57,75 @@ namespace CATI9101
              }
             */
             //-------------------------------------------------------
-            /* Console.WriteLine("Digite seu nome:");
+            //
+
+            /*
+             Console.WriteLine("Digite seu nome:");
              string nome = Console.ReadLine();
              Console.WriteLine("Digite o ano de seu nascimento:");
              //int ano = (int)Console.ReadLine();  //cast não foi ):
              //int ano = int.Parse(Console.ReadLine()); // Parse foi :D
              string ano = Console.ReadLine(); //Classe Convert foi :D
              int idade = DateTime.Now.Year - int.Parse(ano);
-             Console.WriteLine(" oi {0} sua idade {1}", nome, idade);*/
+             Console.WriteLine(" oi {0} sua idade {1}", nome, idade);
+             */
 
-            Console.WriteLine("Digite um numero de 1 a 10: ");
-            int numero = int.Parse(Console.ReadLine());
-            if (numero > 0 && numero < 11)
+            bool atende = false;
+            int[] vnumero = new int[10];
+            string sair = string.Empty;
+            int cont = 10;    
+
+            while (sair!= "s" && cont > 0)
+            {
+
+                Console.WriteLine("Digite um numero de 1 a 10: ");
+                
+                    int numero = int.Parse(Console.ReadLine());
+
+                do
+                {
+                    if (numero > 0 && numero < 11)
+                    {
+                        for (int i = 0; i < 10; i++)
+                        {
+                            Console.WriteLine("{0} x {1} = {2}", numero, i + 1, numero * (i + 1));
+                            //Console.WriteLine(numero + "x" + 1 + "=" + numero * (i + 1));
+
+                        }
+                        atende = false;
+                    }
+                    else
+                    {
+
+                        atende = true;
+
+                        Console.WriteLine("Sabe lê não? Você deve Digitar um valor entre 1 e 10: ");
+                        numero = int.Parse(Console.ReadLine());
+
+                    }
+                } while (atende);
+                 
+                cont--; //numero na variavel contador
+                vnumero [cont] = numero; 
+
+                Console.WriteLine("Deseja sair? (s/N): ");
+                sair = Console.ReadLine();
+                Console.Clear(); //Limpar console
+                                 
+            } //fim do while
+            Console.WriteLine("-----------------------------------------------------------------------------");
+            Console.Write("Você consultou as tabuadas dos numeros: ");
+            Console.WriteLine("-----------------------------------------------------------------------------");
+            foreach (var item in vnumero)
+            {
+                
+                if (item != 0) Console.Write($"{item}, ");
+
+            }
+
+                
 
             
-
             //maneiras de conversões de tipos
             Console.ReadKey();
             
