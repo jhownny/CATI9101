@@ -70,6 +70,8 @@ namespace CATI9101
              Console.WriteLine(" oi {0} sua idade {1}", nome, idade);
              */
 
+
+            /*
             bool atende = false;
             int[] vnumero = new int[10];
             string sair = string.Empty;
@@ -122,10 +124,36 @@ namespace CATI9101
                 if (item != 0) Console.Write($"{item}, ");
 
             }
+            */
 
+            string[] jogadores = { "lima", "Genivaldo", "Cleiton", "Varildo", "Kelcino" };
+            //int[,] pontos = { { 0, 2 }, { 1, 3 }, { 2, 5 }, { 3, 4 } };
+            string[] times = new string[5];
+            int [,] tabela = new int[5,6];
+
+            /*
+            int[,] m = new int[4, 2];
+            m[0, 0] = 0;
+            m[1, 0] = 1;
+            m[2, 0] = 2;
+            m[3, 0] = 3;
+            m[4, 0] = 4;
+            m[0, 1] = 2;
+            */
+
+            foreach (string jogador in jogadores)
+            {
+                Console.WriteLine(jogador);
+            }
+            for (int i = 0; i < jogadores.Length; i++)
+            {
+                Console.WriteLine("Digite o nome do {0}° jogador:", (i + 1));
+                jogadores[i] = Console.ReadLine();
+            }
+          
                 
 
-            
+
             //maneiras de conversões de tipos
             Console.ReadKey();
             
