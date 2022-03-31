@@ -125,22 +125,23 @@ namespace CATI9101
 
             }
             */
-
+            /*
             string[] jogadores = { "lima", "Genivaldo", "Cleiton", "Varildo", "Kelcino" };
             //int[,] pontos = { { 0, 2 }, { 1, 3 }, { 2, 5 }, { 3, 4 } };
             string[] times = new string[5];
             int [,] tabela = new int[5,6];
+            
 
-            /*
-            int[,] m = new int[4, 2];
-            m[0, 0] = 0;
-            m[1, 0] = 1;
-            m[2, 0] = 2;
-            m[3, 0] = 3;
-            m[4, 0] = 4;
-            m[0, 1] = 2;
-            */
-
+            
+            //int[,] m = new int[4, 2];
+            //m[0, 0] = 0;
+            //m[1, 0] = 1;
+            //m[2, 0] = 2;
+            //m[3, 0] = 3;
+            //m[4, 0] = 4;
+            //m[0, 1] = 2;
+            
+             
             foreach (string jogador in jogadores)
             {
                 Console.WriteLine(jogador);
@@ -150,12 +151,77 @@ namespace CATI9101
                 Console.WriteLine("Digite o nome do {0}° jogador:", (i + 1));
                 jogadores[i] = Console.ReadLine();
             }
-          
-                
+          */
+
+            
+                    //manipulação de strings
+            string nome = " Jhonata Batista Santos ";
+            Console.WriteLine(nome + " - " + nome.Length);
+
+                    //retornar caracteres
+            Console.WriteLine(nome.Length);
+
+                    //Removendo espaços do começo e do fim (TRIM)
+           /* nome = nome.Trim();
+            Console.WriteLine(nome + " - " + nome.Length);
+
+                     //exibindo os primeiros 4 caracters de nome
+            Console.WriteLine("Primeiro nome: " + nome.Substring(0,7));
+            Console.WriteLine("sobrenome: " + nome.Substring(8));
+
+                     //alterando a variavel para manter apenas os 4 primeiros caracteres.
+
+            nome = nome.Substring(0,4);
+            nome = nome.Remove(4);
 
 
-            //maneiras de conversões de tipos
+            Console.WriteLine(nome.Remove(4));//mantem as 4 primeiros
+
+            nome = nome.Replace(" ", " ");
+            Console.WriteLine(nome);
+
+
+                    //coloca caracteres em uma string
+            Console.WriteLine(nome.Insert(8, ""));
+
+                    //retorna a posição da primeira ocorrencia da string.
+            Console.WriteLine(nome.IndexOf("o"));
+            
+                    //retorna caracteres em maiusculo e minusculo. 
+            Console.WriteLine(nome.ToUpper());
+            Console.WriteLine(nome.ToLower());
+            */
+
+
+            //Divide uma string em um vetor de strings.
+            
+            string[] vnome;
+            vnome = nome.Split(' ');
+            for (int i = 0; i < vnome.Length; i++)
+            {
+                Console.WriteLine(vnome[i]);
+            }
+            
+
+            //invertendo as frase.
+            string frase = "Amapá é dois mais dois";
+            Console.WriteLine(frase);
+            string fraseinv = string.Empty;
+            for (int i = frase.Length -1; i > -1; i--)
+            {
+                fraseinv += frase.Substring(i, 1);
+            }
+            Console.WriteLine(fraseinv);
+
+
+            vnome.
+
+
+
+                    //maneiras de conversões de tipos
             Console.ReadKey();
+
+            
             
         }
     }
