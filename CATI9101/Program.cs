@@ -11,9 +11,10 @@ namespace CATI9101
 
 
         static void Main(string[] args)
-        {
-            //declaração de variaveis
-            /* var x = 10;
+        {//declaração de variaveis
+
+            /* 
+             var x = 10;
              var nome = "Maria";
              var teste = true;
              var valor = 12.89;
@@ -151,7 +152,7 @@ namespace CATI9101
                 Console.WriteLine("Digite o nome do {0}° jogador:", (i + 1));
                 jogadores[i] = Console.ReadLine();
             }
-          */
+          
 
             
                     //manipulação de strings
@@ -190,7 +191,7 @@ namespace CATI9101
                     //retorna caracteres em maiusculo e minusculo. 
             Console.WriteLine(nome.ToUpper());
             Console.WriteLine(nome.ToLower());
-            */
+            
 
 
             //Divide uma string em um vetor de strings.
@@ -212,13 +213,44 @@ namespace CATI9101
                 fraseinv += frase.Substring(i, 1);
             }
             Console.WriteLine(fraseinv);
+            */
 
 
-            vnome.
+            //Manupulação de Matrizes
+            Console.WriteLine();
+            int [] numeros = new int[6];
+            Random random = new Random();    
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                int sorteados = random.Next(1, 60);    
+                if (i==0)
+
+                numeros[i] = sorteados;
+
+                else // à aprtir do segundo número sorteado.
+                {
+                    if(Array.BinarySearch(numeros, sorteados)< 0);
+                    numeros[i] = sorteados;
+
+                }
+
+                if (i!=numeros.Length -1)    
+                Console.Write(numeros[i] + "-"); 
+                else
+                    Console.WriteLine(numeros[i]);
+            }
+            Console.WriteLine();
+            Array.Sort(numeros); //ordena os números no vetor
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                if (i != numeros.Length - 1)
+                    Console.Write(numeros[i] + "-");
+                else
+                    Console.WriteLine(numeros[i]);
+            }
 
 
-
-                    //maneiras de conversões de tipos
+            //maneiras de conversões de tipos
             Console.ReadKey();
 
             
