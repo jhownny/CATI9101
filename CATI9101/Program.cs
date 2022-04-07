@@ -214,15 +214,78 @@ namespace CATI9101
             Console.WriteLine(fraseinv);
 
 
-            vnome.
+
+
+            //Manupulação de Matrizes
+            Console.WriteLine();
+            int[] numeros = new int[6];
+            Random random = new Random();
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                int sorteados = random.Next(1, 60);
+                if (i == 0)
+
+                    numeros[i] = sorteados;
+
+                else // à aprtir do segundo número sorteado.
+                {
+                    if (Array.BinarySearch(numeros, sorteados) < 0) ;
+                    numeros[i] = sorteados;
+
+                }
+
+                if (i != numeros.Length - 1)
+                    Console.Write(numeros[i] + "-");
+                else
+                    Console.WriteLine(numeros[i]);
+            }
+            Console.WriteLine();
+            Array.Sort(numeros); //ordena os números no vetor
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                if (i != numeros.Length - 1)
+                    Console.Write(numeros[i] + "-");
+                else
+                    Console.WriteLine(numeros[i]);
+
+            }
+            */
+            int p = 3;
+            int j = 6;
+            int[,] vs = new int[3, 6];
+
+            //ordenar
+            for (int l = 0; l < p; l++)
+            {//percorrer as linhas da matriz
+                for (int r = 0; r < (j - 1); r++) ;
+                {
+
+                    for (int c = r + 1; c < j; c++) ;
+                    {
+                        int t;
+                        if (vs[l, r] >= vs[l, c])
+                        {
+                            t + vs[l, r];
+                        }
+
+
+                    }
+                }
+            }
 
 
 
-                    //maneiras de conversões de tipos
+
+
+
+
+
+
+            //maneiras de conversões de tipos
             Console.ReadKey();
 
-            
-            
+
+
         }
     }
 }
