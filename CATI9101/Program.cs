@@ -249,7 +249,7 @@ namespace CATI9101
                     Console.WriteLine(numeros[i]);
 
             }
-            */
+            /*
             int p = 3;
             int j = 6;
             int[,] vs = new int[3, 6];
@@ -272,7 +272,7 @@ namespace CATI9101
                     }
                 }
             }
-
+            */
 
 
 
